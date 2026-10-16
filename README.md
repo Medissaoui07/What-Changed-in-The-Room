@@ -18,18 +18,6 @@ and large VLM dependencies. The tradeoff is processing time: OpenMVS depth
 estimation and fusion for the colored room maps is the heaviest stage. The
 first run also needs internet access to download model weights.
 
-For the architecture rationale, model choices, tradeoffs, and limitations, see
-the [LaTeX design note PDF](docs/DESIGN_NOTE.pdf) and its
-[LaTeX source](docs/DESIGN_NOTE.tex), which includes a typeset pipeline diagram
-and labeled figure slots for
-real segmentation, paired-map, and change-evidence images. Add them under
-`docs/figures/` as `segmentation_example.png`, `paired_room_maps.png`, and
-`change_evidence.png`, then rebuild the PDF from `docs/` with:
-
-```bash
-pdflatex -interaction=nonstopmode -halt-on-error DESIGN_NOTE.tex
-pdflatex -interaction=nonstopmode -halt-on-error DESIGN_NOTE.tex
-```
 
 ## Quick start
 
