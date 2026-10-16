@@ -1,0 +1,48 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.tools/
+.ruff_cache/
+.venv/
+venv/
+.myenv/
+.env
+.env.*
+!.env.example
+build/
+dist/
+*.egg-info/
+*.aux
+docs/DESIGN_NOTE.log
+*.out
+*.toc
+*.synctex.gz
+
+# Generated UI runs, COLMAP workspaces and local experiment outputs
+output/
+runs/
+logs/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+
+# Model weights and downloaded model caches
+*.safetensors
+*.bin
+*.pt
+models/
+hf_cache/
+torch_cache/
+
+# Local recordings and generated artifacts
+*.mp4
+*.mov
+*.avi
+*.ply
+*.pcd
+*.log
+assets/Screenshot from *.png

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "what-changed-in-the-room"
+version = "0.1.0"
+description = "Uncertainty-aware 3D scene change detection from handheld videos"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "opencv-python-headless>=4.8",
+]
+
+[project.scripts]
+wcr = "what_changed_room.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7.4"]
+reconstruction = ["open3d>=0.18"]
+ui = ["streamlit>=1.30"]
+models = ["ultralytics>=8.3"]
+depth = ["transformers>=4.45,<5", "huggingface-hub>=0.24", "safetensors>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
